@@ -3,11 +3,13 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
+require('dotenv').config();
+
 const app = express();
 
 app.use(express.json());
-
-mongoose.connect('mongodb://localhost/elearning-platform', {
+//mongodb+srv://SrinivasGokarla:Srinivas217@cluster0.mnpntmn.mongodb.net/elearning-platform
+mongoose.connect('mongodb+srv://SrinivasGokarla:Srinivas217@cluster0.mnpntmn.mongodb.net/elearning-platform', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
